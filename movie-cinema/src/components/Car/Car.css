@@ -1,0 +1,56 @@
+.konten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.kartu {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.gambar-kartu {
+  height: 200px;
+  overflow: hidden;
+}
+
+.gambar-kartu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badan-kartu {
+  padding: 20px;
+}
+
+.badan-kartu p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #646464;
+}
+
+.badan-kartu p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.badan-kartu button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+}
+
+.badan-kartu button:hover {
+  background-color: #0056b3;
+}
