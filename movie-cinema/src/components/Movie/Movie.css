@@ -1,0 +1,47 @@
+/* small screen */
+.movie {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 1rem;
+    font-style: 2rem;
+    color: #4361ee;
+}
+
+img {
+    border-radius: 25px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #4361ee;
+}
+
+p {
+    color: #64748b;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* medium screen */
+@media (min-width: 768px) {
+    .movie {
+        flex-basis: 50%;
+    }
+}
+
+/* large screen */
+@media (min-width: 992px) {
+    .movie {
+        flex-basis: 25%;
+        padding: 1rem;
+    }
+}

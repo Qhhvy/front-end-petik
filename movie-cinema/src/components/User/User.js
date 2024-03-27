@@ -54,17 +54,8 @@
 import "./User.css";
 
 const User = (props) => {
-  const {
-    nama,
-    // alamat,
-    // angkatan,
-    // hobies,
-    // status,
-    profil,
-    member,
-    // gambar
-  } = props;
-
+  const {nama, alamat, angkatan, hobi, status, message, member, gambar} = props;
+  
   // const tableStyle = {
   //   border: "1px solid black",
   //   width: "300px",
@@ -88,7 +79,7 @@ const User = (props) => {
           </tr>
           <tr>
             <td>
-              <button onClick={() => profil(nama)}>Message</button>
+              <button onClick={message}>Message</button>
             </td>
             <td>
               <button>Subscribe</button>
