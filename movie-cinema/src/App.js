@@ -4,6 +4,7 @@ import Main from "./components/Main/Main.js"
 import Footer from "./components/Footer/Footer.js"
 
 function App() { // function component
+
   return (
     /* 
     in html = attributes
@@ -11,7 +12,6 @@ function App() { // function component
     // element class
     <div className="container"> 
         <Navbar />
-        {/* <h1>Hello World</h1> */}
         <Main/>
         <Footer nama="Kahfi Al Ghifari"/>
     </div>

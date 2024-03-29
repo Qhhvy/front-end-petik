@@ -129,22 +129,23 @@ const Main = () => {
             member: "Gold",
             message: "Profil telah dibuka!"
         }
-      ];
+    ];
+      
     return (
         <div class="content">            
             <Hero/>
             <Movies/>
-            {
+            {/* {
                 datas.map((data) => {
                     return (
-                        <User
-                            nama={data.nama}
-                            member={data.member}
-                            message={() => alert(data.message)}
-                        />
+                      <User
+                          nama={data.nama}
+                          member={data.member}
+                          message={() => alert(data.message)}
+                      />
                     );
                 })
-            }
+            } */}
             {/* <Car 
                 // gambar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7Hv3Qb8SYkmExW-8QlTKLwdsV-ttRZrGEKJmYe-3N4uzgywPWb0dHXqrH2C_2M6NeHU&usqp=CAU" atau
                 gambar={imgProfile}
