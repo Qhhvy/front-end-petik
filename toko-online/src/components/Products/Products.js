@@ -2,7 +2,7 @@ import React from "react";
 import "./Products.css";
 
 const Products = (props) => {
-    const {gambar, nama, harga, beli} = props;
+    const {gambar, nama, harga, beli, terjual} = props;
 
     return (
         <div className="konten">
@@ -11,8 +11,10 @@ const Products = (props) => {
                     <img src={gambar} alt="foto-barang" width={300}/>
                 </div>
                 <div className="badan-kartu">
-                    <p style={{ color: "grey" }}>{nama}</p>
+                    <p style={{ color: "grey", fontSize: "20px", fontWeight: "bolder" }}>{nama}</p>
                     <p style={{ fontSize: "30px", color: "green", fontWeight: "bold" }}>Rp {harga}</p>
+                    <small style={{ color: "grey" }}>Terjual : {terjual}</small>
+                    <br/>
                     <button onClick={beli}>Beli</button>
                 </div>
             </div>
