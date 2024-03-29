@@ -1,0 +1,62 @@
+.konten {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.kartu {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #978d8d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.gambar-kartu {
+    width: 100%;
+    overflow: hidden;
+}
+
+.gambar-kartu img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.badan-kartu {
+    padding: 10px;
+}
+
+.badan-kartu p {
+    margin: 5px 0;
+}
+
+.badan-kartu button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.badan-kartu button:hover {
+    background-color: #0056b3;
+}
+
+/* Style untuk layar tablet */
+@media (max-width: 768px) {
+    .konten {
+        justify-content: center;
+    }
+}
+
+/* Style untuk layar mobile */
+@media (max-width: 576px) {
+    .kartu {
+        width: 90%;
+    }
+}

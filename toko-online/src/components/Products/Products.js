@@ -1,4 +1,5 @@
 import React from "react";
+import "./Products.css";
 
 const Products = (props) => {
     const {gambar, nama, harga, beli} = props;
@@ -6,12 +7,12 @@ const Products = (props) => {
     return (
         <div className="konten">
             <div class="kartu">
-                <div class="gambar-kartu">
+                <div className="gambar-kartu">
                     <img src={gambar} alt="foto-barang" width={300}/>
                 </div>
-                <div class="badan-kartu">
-                    <p>{nama}</p>
-                    <p>Rp {harga}</p>
+                <div className="badan-kartu">
+                    <p style={{ color: "grey" }}>{nama}</p>
+                    <p style={{ fontSize: "30px", color: "green", fontWeight: "bold" }}>Rp {harga}</p>
                     <button onClick={beli}>Beli</button>
                 </div>
             </div>

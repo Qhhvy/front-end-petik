@@ -8,8 +8,8 @@ const Movie = (props) => {
         <div className="movie">
             <img src={poster} alt="title" width={200}/>
             <h3 className="title">{title}</h3>
-            <p class="year">{year}</p>
-            <p class="genre">{genre}</p>
+            <p className="year">{year}</p>
+            <p className="genre">{genre}</p>
         </div>
     );
 };

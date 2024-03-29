@@ -1,0 +1,22 @@
+/* large screen */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+/* medium screen */
+@media (man-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* small screen */
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+}

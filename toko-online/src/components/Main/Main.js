@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "../Header/Header";
 import Products from "../Products/Products";
-import Footer from "../Footer/Footer";
+import "./Main.css";
 
 const Main = () => {
     const datas = [
@@ -27,21 +26,21 @@ const Main = () => {
 
     return (
         <div className="content">
-            <Header />
-            {/* <Products nama="Poco X6 Pro"  harga={2499000}  beli={() => alert("Sudah Dibeli")}/> */}
-            {
-                datas.map((data) => {
-                    return (
-                        <Products
-                            gambar={data.gambar}
-                            nama={data.nama}
-                            harga={data.harga}
-                            beli={() => alert(data.beli)}
-                        />
-                    );
-                })
-            }
-            <Footer nama="Kahfi Al Ghifari"/>
+            <h1 style={{ padding: "0 2rem" }}>Hot Products</h1>
+            <div class="products-container">
+                {
+                    datas.map((data) => {
+                        return (
+                            <Products
+                                gambar={data.gambar}
+                                nama={data.nama}
+                                harga={data.harga}
+                                beli={() => alert(data.beli)}
+                            />
+                        );
+                    })
+                }
+            </div>
         </div>
     )
 };
