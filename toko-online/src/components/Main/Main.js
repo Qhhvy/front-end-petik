@@ -159,6 +159,7 @@ const Main = () => {
                     })
                 }
             </div>
+            <hr style={{margin: "0 2rem"}}/>
             <AddProductForm onAddProduct={addFruit}/>
         </div>
     )

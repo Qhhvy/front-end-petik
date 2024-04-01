@@ -17,8 +17,9 @@
 }
 
 .form-title {
-    color: #4361ee;
+    color: #333;
     font-size: 2rem;
+    margin-top: 3rem;
 }   
 
 .form-inputgroup {
@@ -32,9 +33,6 @@
 }
 
 .form-input {
-    color: #4361ee;
-    outline-color: #64748B;
-    border-color: #4361ee;
     border-radius: 5px;
     box-sizing: border-box;
     width: 100%;
@@ -42,18 +40,23 @@
 }
 
 .form-label {
-    color: #64748B;
+    color: #686767;
     margin-top: 0.1rem;
     margin-bottom: 0.5rem;
 }
 
 .form-button {
-    background-color: #4361ee;
+    background-color: #333;
     color: #fff;
     width: 100%;
     border: 0px;
     height: 2rem;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #000000;
 }
 
 /* medium screen */
