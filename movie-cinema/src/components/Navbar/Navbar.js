@@ -1,3 +1,4 @@
+import {NavLink} from "react-router-dom";
 import "../Navbar/Navbar.css"
 
 const Navbar = () => {
@@ -5,13 +6,13 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li>
-          <a href="#">Home</a>
+          <NavLink to={"/"}>Home</NavLink>
         </li>
         <li>
-          <a href="#">About</a>
+          <NavLink to={"/popular"}>Popular</NavLink>
         </li>
         <li>
-          <a href="#">Login</a>
+          <NavLink to={"/top"}>Top Rated</NavLink>
         </li>
       </ul>
     </nav>
