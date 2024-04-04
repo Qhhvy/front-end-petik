@@ -3,7 +3,7 @@ import "./Movie.css";
 import {NavLink} from "react-router-dom";
 
 const Movie = (props) => {
-    const {title, year, poster, id} = props;
+    const {title, year, poster, id, vote_average, vote_count} = props;
 
     return (
         <div className="movie">
@@ -12,6 +12,8 @@ const Movie = (props) => {
                 <NavLink to={`/detail/${id}`}>{title}</NavLink>
             </h3>
             <p className="year">{year}</p>
+            <p>Score : {vote_average}</p>
+            <p>Total Voters : {vote_count}</p>
         </div>
     );
 };

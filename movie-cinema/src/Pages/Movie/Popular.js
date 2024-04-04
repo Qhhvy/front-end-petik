@@ -1,9 +1,10 @@
 import React from 'react';
+import MoviesPopular from "../../components/MoviesPupular/MoviesPopular";
 
 const Popular = () => {
     return (
         <div>
-            <h1>Popoular</h1>
+            <MoviesPopular/>
         </div>
     )
 }

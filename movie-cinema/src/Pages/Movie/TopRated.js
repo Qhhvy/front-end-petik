@@ -1,9 +1,10 @@
 import React from 'react';
+import TopRatedMovies from "../../components/TopRatedMovies/TopRatedMovies";
 
 const ToopRated = () => {
     return (
         <div>
-            <h1>Top Reated</h1>
+            <TopRatedMovies/>
         </div>
     )
 }

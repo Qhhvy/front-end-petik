@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Movie from "../Movie/Movie";
-import "./Movies.css"
+import "../Movies/Movies.css"
 import AddMovieForm from "../AddMovieForm/AddMovieForm";
-import { getMovieList } from "../../api.js";
+import { getMovieDetail } from "../../api.js";
 
 const Movies = () => {
-    const [nama, setNama] = useState("Ucup");
-
-    const [hasil, setHasil] = useState(0); // state hasil
-
-    const tambah = () => { // handle tambah
-        setHasil((hasil) => hasil + 1);
-    };
-
-    const kurang = () => { // handle kurang
-        setHasil((hasil) => hasil - 1);
-    };
-
     const [datas, setDatas] = useState([])
 
     const handleClick = () => {
@@ -35,14 +23,14 @@ const Movies = () => {
 
     useEffect(() => {
         // menangkap api
-        getMovieList().then((result) => {
+        getMovieDetail().then((result) => {
             setDatas(result);
         });
     }, []);
 
     return (
         <div className="">
-            <h2>Latest Movies</h2>
+            <h2>Popular Movies</h2>
             <div class="movies-container">
                 {
                     datas.map((data) => {
@@ -57,10 +45,6 @@ const Movies = () => {
                     })
                 }
                 <button onClick={handleClick}>Add Movie</button>
-                <hr/>
-                <p>Hasil : {hasil}</p>
-                <button onClick={kurang}>Kurang</button>
-                <button onClick={tambah}>Tambah</button>
             </div>
             <AddMovieForm onAddMovie={addMovie}/>
         </div>
