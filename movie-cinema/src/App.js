@@ -1,6 +1,6 @@
 // import { Component } from "react";
+import React from "react";
 import Navbar from "./components/Navbar/Navbar.js"
-import Main from "./components/Main/Main.js"
 import Footer from "./components/Footer/Footer.js"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home.js"

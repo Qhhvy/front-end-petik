@@ -27,7 +27,11 @@ function NavbarComponent(args) {
               <NavLink to="/dashboard" className="text-light mx-3" style={{ textDecoration: "none" }}>Dashboard</NavLink>
               <NavLink to="/top" className="text-light mx-3" style={{ textDecoration: "none" }}>Top Rated</NavLink>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>
+            <NavLink to="/login" className="text-light mx-3" style={{ textDecoration: "none" }}>
+              <button className="button is-light">Login</button>
+            </NavLink>
+          </NavbarText>
         </Collapse>
       </Navbar>
     </div>

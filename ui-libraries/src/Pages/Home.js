@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from "../components/Hero"
-import Movies from "../components/Movies"
+import Products from "../components/Products"
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 
@@ -9,7 +9,7 @@ const Home = () => {
     <div>
         <Navbar/>
         <Hero/>
-        <Movies/>
+        <Products/>
         <Footer/>
     </div>
   )
