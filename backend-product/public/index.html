@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Usage</title>
+    <script
+      src="https://kit.fontawesome.com/76e6ed6da8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        padding: 50px;
+      }
+
+      h2 {
+        color: #555;
+        margin-top: 50px;
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome to SukMaX API</h1>
+        <p>
+          This is the landing page for SukMaX API usage. Please refer to the API
+          documentation for more information.
+        </p>
+        <a href="#documentation" class="btn btn-light btn-lg">Documentation</a>
+      </div>
+    </div>
+
+    <div id="documentation" class="container">
+      <h2>API Documentation - Products</h2>
+
+      <h3>1. Get All Products</h3>
+      <p><strong>Method:</strong> GET</p>
+      <p>
+        <strong>Endpoint:</strong>
+        <code>https://api-product.sukmax.my.id/products</code>
+        <button
+          class="btn btn-light"
+          onclick="copyToClipboard('https://api-product.sukmax.my.id/products')"
+        >
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <p><strong>Description:</strong> Returns a list of all products.</p>
+      <pre>
+          GET /products
+        </pre
+      >
+
+      <h3>2. Get Product by ID</h3>
+      <p><strong>Method:</strong> GET</p>
+      <p>
+        <strong>Endpoint:</strong>
+        <code>https://api-product.sukmax.my.id/products/:id</code>
+        <button
+          class="btn btn-light"
+          onclick="copyToClipboard('https://api-product.sukmax.my.id/products/:id')"
+        >
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <p><strong>Description:</strong> Returns a specific product by its ID.</p>
+      <pre>
+          GET /products/:id
+        </pre
+      >
+
+      <h3>3. Create a Product</h3>
+      <p><strong>Method:</strong> POST</p>
+      <p>
+        <strong>Endpoint:</strong>
+        <code>https://api-product.sukmax.my.id/products</code>
+        <button
+          class="btn btn-light"
+          onclick="copyToClipboard('https://api-product.sukmax.my.id/products')"
+        >
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <p><strong>Description:</strong> Creates a new product.</p>
+      <pre>
+          POST /products
+        </pre
+      >
+
+      <h3>4. Update a Product</h3>
+      <p><strong>Method:</strong> PUT</p>
+      <p>
+        <strong>Endpoint:</strong>
+        <code>https://api-product.sukmax.my.id/products/:id</code>
+        <button
+          class="btn btn-light"
+          onclick="copyToClipboard('https://api-product.sukmax.my.id/products/:id')"
+        >
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <p>
+        <strong>Description:</strong> Updates an existing product by its ID.
+      </p>
+      <pre>
+          PUT /products/:id
+        </pre
+      >
+
+      <h3>5. Delete a Product</h3>
+      <p><strong>Method:</strong> DELETE</p>
+      <p>
+        <strong>Endpoint:</strong>
+        <code>https://api-product.sukmax.my.id/products/:id</code>
+        <button
+          class="btn btn-light"
+          onclick="copyToClipboard('https://api-product.sukmax.my.id/products/:id')"
+        >
+          <i class="fas fa-copy"></i>
+        </button>
+      </p>
+      <p>
+        <strong>Description:</strong> Deletes an existing product by its ID.
+      </p>
+      <pre>
+          DELETE /products/:id
+        </pre
+      >
+    </div>
+    <script>
+      function copyToClipboard(endpoint) {
+        const el = document.createElement("textarea");
+        el.value = endpoint;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand("copy");
+        document.body.removeChild(el);
+
+        // Mengubah tombol menjadi tombol checklist
+        const button = document.getElementById("copyButton");
+        button.innerHTML = '<i class="fas fa-check"></i>';
+        button.classList.remove("btn-primary");
+        button.classList.add("btn-success");
+
+        // Menampilkan toast "Endpoint copied"
+        const toast = document.getElementById("endpointToast");
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
